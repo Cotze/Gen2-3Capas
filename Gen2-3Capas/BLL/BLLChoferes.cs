@@ -35,7 +35,7 @@ namespace Gen2_3Capas.BLL
         }
 
         //Eliminar
-        public static string DalChofer(int paramIdChofer)
+        public static string DelChofer(int paramIdChofer)
         {
             try
             {

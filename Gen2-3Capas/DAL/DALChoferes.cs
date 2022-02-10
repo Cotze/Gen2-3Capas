@@ -78,7 +78,7 @@ namespace Gen2_3Capas.DAL
         {
             try
             {
-                DBConnection.ExecuteNonQuery("Choferes_Eliminar", "@id", paramIdChofer);
+                DBConnection.ExecuteNonQuery("Choferes_Eiminar", "@id", paramIdChofer);
             }
             catch (Exception ex)
             {
