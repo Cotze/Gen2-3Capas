@@ -19,7 +19,7 @@ namespace Gen2_3Capas.DAL
                 //Declaramos un DataSet
                 DataSet dsChoferes;
 
-                //Verificar la disponiblidad
+                //Verificar la disponibilidad
                 if (paramDisponibilidad == null)
                 {
                     //Obtener todos los Choferes de la BD

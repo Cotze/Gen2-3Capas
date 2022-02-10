@@ -29,9 +29,9 @@ namespace Gen2_3Capas.BLL
         }
 
         //Actualizar
-        public static void UpdChoferes(int paramIdChofer, string paramLicencia, string paramTelefono, DateTime paramFechaNacimiento, string paramNombre, string paramApPaterno, string paramApMaterno, string paramUrlFoto, bool? paramDisponiblidad)
+        public static void UpdChoferes(int paramIdChofer, string paramLicencia, string paramTelefono, DateTime paramFechaNacimiento, string paramNombre, string paramApPaterno, string paramApMaterno, string paramUrlFoto, bool? paramDisponibilidad)
         {
-            DALChoferes.UpdChofer(paramIdChofer, paramLicencia, paramTelefono, paramFechaNacimiento, paramNombre, paramApPaterno, paramApMaterno, paramUrlFoto, paramDisponiblidad);
+            DALChoferes.UpdChofer(paramIdChofer, paramLicencia, paramTelefono, paramFechaNacimiento, paramNombre, paramApPaterno, paramApMaterno, paramUrlFoto, paramDisponibilidad);
         }
 
         //Eliminar
