@@ -1,4 +1,4 @@
---Camiones
+	--Camiones
 --listar
 CREATE PROC Camiones_Listar
 @Disponibilidad bit = null
@@ -321,7 +321,7 @@ BEGIN
 	IF (@Estatus = 0) -- RUTAS EN PROCESO
 	BEGIN
 		SELECT R.id, R.FHSalida, FHLlegada = R.FHLlegadaEstimada, R.Distancia, R.ATiempo, CH.Nombre, CH.Licencia, FotChofer = CH.UrlFoto, C.Matricula, FotoCamion = C.UrlFoto, 
-		Origen = DD.Calle + ' ' + DO.Numero + ' ' + DO.Colonia + ' ' + DO.CP, 
+		Origen = DO.Calle + ' ' + DO.Numero + ' ' + DO.Colonia + ' ' + DO.CP, 
 		Destino = DD.Calle + ' ' + DD.Numero + ' ' + DD.Colonia + ' ' + DD.CP 
 		FROM Rutas R INNER JOIN Camiones C
 		ON R.Camion_id = C.id INNER JOIN Choferes CH

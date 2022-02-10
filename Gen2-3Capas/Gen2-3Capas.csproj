@@ -106,8 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Catalogos\Choferes\AltaChofer.aspx" />
-    <Content Include="Catalogos\Choferes\ListadoChoferes.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -171,21 +169,6 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="BLL\BLLChoferes.cs" />
-    <Compile Include="Catalogos\Choferes\AltaChofer.aspx.cs">
-      <DependentUpon>AltaChofer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Catalogos\Choferes\AltaChofer.aspx.designer.cs">
-      <DependentUpon>AltaChofer.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Catalogos\Choferes\ListadoChoferes.aspx.cs">
-      <DependentUpon>ListadoChoferes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Catalogos\Choferes\ListadoChoferes.aspx.designer.cs">
-      <DependentUpon>ListadoChoferes.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -193,7 +176,6 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DAL\DALChoferes.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -232,8 +214,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Catalogos\Camiones\" />
-    <Folder Include="Catalogos\Rutas\" />
+    <Folder Include="BLL\" />
+    <Folder Include="Catalogos\" />
+    <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

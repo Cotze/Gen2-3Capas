@@ -16,7 +16,7 @@ namespace Gen2_3Capas.VO
         private DateTime _FechaNacimiento;
         private String _Licencia;
         private String _UrlFoto;
-        private bool _Disponibilidad;
+        private bool _Disponiblidad;
 
         public int IdChofer { get => _IdChofer; set => _IdChofer=value; }
         public string Nombre { get => _Nombre; set => _Nombre=value; }
@@ -26,7 +26,7 @@ namespace Gen2_3Capas.VO
         public DateTime FechaNacimiento { get => _FechaNacimiento; set => _FechaNacimiento=value; }
         public string Licencia { get => _Licencia; set => _Licencia=value; }
         public string UrlFoto { get => _UrlFoto; set => _UrlFoto=value; }
-        public bool Disponibilidad { get => _Disponibilidad; set => _Disponibilidad=value; }
+        public bool Disponiblidad { get => _Disponiblidad; set => _Disponiblidad=value; }
 
         public ChoferesVO() //Constructor
         {
@@ -38,7 +38,7 @@ namespace Gen2_3Capas.VO
             FechaNacimiento = DateTime.Parse("1900-01-01");
             Licencia ="";
             UrlFoto = "";
-            Disponibilidad = false;
+            Disponiblidad = false;
         }
 
         public ChoferesVO(DataRow dr)
@@ -46,11 +46,11 @@ namespace Gen2_3Capas.VO
             IdChofer = int.Parse(dr["id"].ToString());
             Nombre = dr["Nombre"].ToString();
             ApPaterno = dr["ApPaterno"].ToString();
-            ApMaterno = dr["ApMaterno"].ToString();
+            ApPaterno = dr["ApMaterno"].ToString();
             Telefono = dr["Telefono"].ToString();
             FechaNacimiento = DateTime.Parse(dr["FechaNacimiento"].ToString());
             UrlFoto = dr["UrlFoto"].ToString();
-            Disponibilidad = bool.Parse(dr["Disponibilidad"].ToString());
+            Disponiblidad = bool.Parse(dr["Disponibilidad"].ToString());
         }
     }
 
