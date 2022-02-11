@@ -10,6 +10,21 @@ namespace Gen2_3Capas.DAL
 {
     public class DALChoferes
     {
+        //Revisar
+        public static bool RevisaChoferes(int idChofer)
+        {
+            DataSet dsChofer =
+                DBConnection.ExecuteDataSet("RevisarChofer", "@id", idChofer);
+            if (dsChofer.Tables[0].Rows.Count > 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         //Listar
         public static List<ChoferesVO> GetLstChoferes(bool? paramDisponibilidad)
         {
@@ -65,7 +80,7 @@ namespace Gen2_3Capas.DAL
         {
             try
             {
-                DBConnection.ExecuteNonQuery("Choferes_Actualizar", "@id", paramIdChofer, "@Nombre", paramNombre, "@ApPaterno", paramApPaterno, "@ApMaterno", paramApMaterno, "@Licencia", paramLicencia, "@Telefono", paramTelefono, "@FechaNacimienot", paramFechaNacimiento, "@UrlFoto", paramUrlFoto, "@Disponibilidad", paramDisponibilidad);
+                DBConnection.ExecuteNonQuery("Choferes_Actualizar", "@id", paramIdChofer, "@Nombre", paramNombre, "@ApPaterno", paramApPaterno, "@ApMaterno", paramApMaterno, "@Licencia", paramLicencia, "@Telefono", paramTelefono, "@FechaNacimiento", paramFechaNacimiento, "@UrlFoto", paramUrlFoto, "@Disponibilidad", paramDisponibilidad);
             }
             catch (Exception ex)
             {

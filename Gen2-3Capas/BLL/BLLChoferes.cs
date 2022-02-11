@@ -29,7 +29,7 @@ namespace Gen2_3Capas.BLL
         }
 
         //Actualizar
-        public static void UpdChoferes(int paramIdChofer, string paramLicencia, string paramTelefono, DateTime paramFechaNacimiento, string paramNombre, string paramApPaterno, string paramApMaterno, string paramUrlFoto, bool? paramDisponibilidad)
+        public static void UpdChoferes(int paramIdChofer, string paramLicencia, string paramTelefono, DateTime? paramFechaNacimiento, string paramNombre, string paramApPaterno, string paramApMaterno, string paramUrlFoto, bool? paramDisponibilidad)
         {
             DALChoferes.UpdChofer(paramIdChofer, paramLicencia, paramTelefono, paramFechaNacimiento, paramNombre, paramApPaterno, paramApMaterno, paramUrlFoto, paramDisponibilidad);
         }
@@ -39,12 +39,23 @@ namespace Gen2_3Capas.BLL
         {
             try
             {
+
+
                 //Verificar la disponibilidad del chofer
+                DALChoferes.RevisaChoferes(paramIdChofer);
                 ChoferesVO Chofer = DALChoferes.GetChoferesById(paramIdChofer);
                 if (Chofer.Disponibilidad)
                 {
-                    DALChoferes.DelChofer(paramIdChofer);
-                    return "1";
+                    bool estado = DALChoferes.RevisaChoferes(paramIdChofer);
+                    if (estado)
+                    {
+                        DALChoferes.DelChofer(paramIdChofer);
+                        return "1";
+                    }
+                    else
+                    {
+                        return "2";
+                    }
                 }
                 else
                 {

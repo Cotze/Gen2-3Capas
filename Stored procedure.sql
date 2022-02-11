@@ -91,7 +91,6 @@ BEGIN
 	(@Nombre, @ApPaterno, @ApMaterno, @Telefono, @FechaNacimiento, @Licencia, 1, @UrlFoto)
 END
 GO
---actualiza
 CREATE PROC Choferes_Actualizar
 @id int,
 @Nombre varchar(50) = NULL,
@@ -100,11 +99,12 @@ CREATE PROC Choferes_Actualizar
 @Telefono varchar(50) = NULL,
 @FechaNacimiento smalldatetime = NULL, --yyy'-'mm'-'dd
 @Licencia varchar(7) = NULL,
-@UrlFoto varchar(MAX) = NULL
+@UrlFoto varchar(MAX) = NULL,
+@Disponibilidad bit = NULL 
 AS
 BEGIN
 	UPDATE Choferes
-	SET Nombre = ISNULL(@Nombre, Nombre), ApPaterno = ISNULL(@ApPaterno, ApPaterno), ApMaterno = ISNULL(@ApMaterno, ApMaterno), Telefono = ISNULL(@Telefono, Telefono), FechaNacimiento = ISNULL(@FechaNacimiento, FechaNacimiento), Licencia = ISNULL(@Licencia, Licencia), UrlFoto = ISNULL(@UrlFoto, UrlFoto)
+	SET Nombre = ISNULL(@Nombre, Nombre), ApPaterno = ISNULL(@ApPaterno, ApPaterno), ApMaterno = ISNULL(@ApMaterno, ApMaterno), Telefono = ISNULL(@Telefono, Telefono), FechaNacimiento = ISNULL(@FechaNacimiento, FechaNacimiento), Licencia = ISNULL(@Licencia, Licencia), UrlFoto = ISNULL(@UrlFoto, UrlFoto), Disponibilidad = ISNULL(@Disponibilidad, Disponibilidad)
 	WHERE id = @id
 END
 GO
