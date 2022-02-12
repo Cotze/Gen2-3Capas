@@ -151,7 +151,7 @@ namespace Gen2_3Capas.DAL
                 {
                     //Encontró un registro
                     DataRow dr = dsCamion.Tables[0].Rows[0];
-                    CamionesVO camion = new CamionesVO();
+                    CamionesVO camion = new CamionesVO(dr);
                     return camion;
                 }
                 else

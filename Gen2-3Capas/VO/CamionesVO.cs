@@ -9,14 +9,14 @@ namespace Gen2_3Capas.VO
     public class CamionesVO
     {
         private int _idCamion;
-        private string _Matricula = "";
-        private string _TipoCamion = "";
-        private int _Modelo = 0;
-        private string _Marca = "";
-        private int _Capacidad = 0;
-        private double _Kilometraje = 0;
-        private bool _Disponibilidad = false;
-        private string _UrlFoto = "";
+        private string _Matricula;
+        private string _TipoCamion;
+        private int _Modelo;
+        private string _Marca;
+        private int _Capacidad;
+        private double _Kilometraje;
+        private bool _Disponibilidad;
+        private string _UrlFoto;
 
         public int IdCamion { get => _idCamion; set => _idCamion=value; }
         public string Matricula { get => _Matricula; set => _Matricula=value; }

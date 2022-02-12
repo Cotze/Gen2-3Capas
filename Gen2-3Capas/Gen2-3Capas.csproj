@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Catalogos\Camiones\ListadoCamiones.aspx" />
     <Content Include="Catalogos\Choferes\AltaChofer.aspx" />
     <Content Include="Catalogos\Choferes\EdicionChofer.aspx" />
     <Content Include="Catalogos\Choferes\ListadoChoferes.aspx" />
@@ -182,6 +183,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BLL\BLLCamiones.cs" />
     <Compile Include="BLL\BLLChoferes.cs" />
+    <Compile Include="Catalogos\Camiones\ListadoCamiones.aspx.cs">
+      <DependentUpon>ListadoCamiones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Camiones\ListadoCamiones.aspx.designer.cs">
+      <DependentUpon>ListadoCamiones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\Choferes\AltaChofer.aspx.cs">
       <DependentUpon>AltaChofer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -252,7 +260,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Catalogos\Camion\" />
+    <Folder Include="Catalogos\Rutas\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
