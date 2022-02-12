@@ -37,7 +37,7 @@
                 <div class="form-btn-group">
                     <label for="<%=txtLicencia.ClientID %>">Licencia</label>
                     <asp:TextBox ID="txtLicencia" placeholder="X-00000" CssClass="form-control" runat="server" MaxLength="7"></asp:TextBox>
-                    <div class="col-md-12" style="margin-bottom: 30px;">
+                    <div class="col-md-12" style="margin-bottom: 30px;  ">
                         <div style="position: absolute; top: 0px; left: 0;">
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="txtLicencia" CssClass="text-danger" runat="server" ErrorMessage="Licencia de chofer es requerida"></asp:RequiredFieldValidator>
                         </div>
@@ -91,7 +91,8 @@
         </div>
     </div>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function ()
+        {
             //Declarar al time picket en español con momentjs
             $.datetimepicker.setLocale('es');
             $("#<%=fechaNacimiento.ClientID %>").datetimepicker({
