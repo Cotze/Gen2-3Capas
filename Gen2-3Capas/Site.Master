@@ -77,7 +77,7 @@
                                     <a href="/Catalogos/Camiones/ListadoCamiones.aspx">Lista Camiones</a>
                                 </li>
                                 <li>
-                                    <a href="/Catalogos/Camiones/AltaCamion.aspx">Alta Camion</a>
+                                    <a href="/Catalogos/Camiones/AltaCamiones.aspx">Alta Camion</a>
                                 </li>
                                 <li>
                                     <a href="/Catalogos/Rutas/AltaRuta.aspx">Alta Ruta</a>

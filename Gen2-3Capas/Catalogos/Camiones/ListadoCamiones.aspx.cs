@@ -35,7 +35,12 @@ namespace Gen2_3Capas.Catalogos.Camiones
 
         protected void GVCamiones_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-
+            if (e.CommandName == "Select")
+            {
+                int index = int.Parse(e.CommandArgument.ToString()); //Referencia al reglonseleccionado
+                string IdCamion = GVCamiones.DataKeys[index].Values["IdCamion"].ToString(); //Recupera el valor de la columna Id del reglon seleccionado
+                Response.Redirect("EdicionCamion.aspx?Id=" + IdCamion);
+            }
         }
 
         protected void GVCamiones_RowEditing(object sender, GridViewEditEventArgs e)
@@ -104,12 +109,13 @@ namespace Gen2_3Capas.Catalogos.Camiones
         protected void GVCamiones_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             string IdCamion = GVCamiones.DataKeys[e.RowIndex].Values["IdCamion"].ToString();
-            DropDownList ModeloCamionAux = (DropDownList)GVCamiones.Rows[e.RowIndex].FindControl("DDLModelo");
-            
-            string Modelo = ModeloCamionAux.SelectedValue;
-            DropDownList MarcaCamionAux = (DropDownList)GVCamiones.Rows[e.RowIndex].FindControl("DDLMarca");
 
+            DropDownList ModeloCamionAux = (DropDownList)GVCamiones.Rows[e.RowIndex].FindControl("DDLModelo");           
+            string Modelo = ModeloCamionAux.SelectedValue;
+
+            DropDownList MarcaCamionAux = (DropDownList)GVCamiones.Rows[e.RowIndex].FindControl("DDLMarca");
             string Marca = MarcaCamionAux.SelectedValue;
+
             int Capacidad = int.Parse(e.NewValues["Capacidad"].ToString());
             double kilometraje = double.Parse(e.NewValues["Kilometraje"].ToString());
 

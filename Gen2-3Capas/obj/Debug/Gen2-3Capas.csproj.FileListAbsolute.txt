@@ -69,7 +69,6 @@ C:\Users\trnet-10\source\repos\Gen2-3Capas\Gen2-3Capas\bin\Microsoft.AspNet.Frie
 C:\Users\trnet-10\source\repos\Gen2-3Capas\Gen2-3Capas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\trnet-10\source\repos\Gen2-3Capas\Gen2-3Capas\bin\es\System.Web.Optimization.resources.dll
 C:\Users\trnet-10\source\repos\Gen2-3Capas\Gen2-3Capas\bin\es\Microsoft.AspNet.FriendlyUrls.resources.dll
-C:\Users\trnet-10\source\repos\Gen2-3Capas\Gen2-3Capas\obj\Debug\Gen2-3Capas.csproj.AssemblyReference.cache
 C:\Users\trnet-10\source\repos\Gen2-3Capas\Gen2-3Capas\obj\Debug\Gen2-3Capas.csproj.CoreCompileInputs.cache
 C:\Users\trnet-10\source\repos\Gen2-3Capas\Gen2-3Capas\obj\Debug\Gen2-3Capas.csproj.CopyComplete
 C:\Users\trnet-10\source\repos\Gen2-3Capas\Gen2-3Capas\obj\Debug\Gen2-3Capas.dll
@@ -152,3 +151,4 @@ C:\Users\DIEGO\Desktop\CursoCarlos\Gen2-3Capas\Gen2-3Capas\obj\Debug\Gen2-3Capas
 C:\Users\DIEGO\Desktop\CursoCarlos\Gen2-3Capas\Gen2-3Capas\obj\Debug\Gen2-3Capas.pdb
 C:\Users\trnet-10\source\repos\Gen2-3Capas\Gen2-3Capas\bin\AjaxControlToolkit.dll
 C:\Users\DIEGO\Desktop\CursoCarlos\Gen2-3Capas\Gen2-3Capas\bin\AjaxControlToolkit.dll
+C:\Users\trnet-10\source\repos\Gen2-3Capas\Gen2-3Capas\obj\Debug\Gen2-3Capas.csproj.AssemblyReference.cache

@@ -109,10 +109,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="autocompletar.asmx" />
+    <Content Include="Catalogos\Camiones\AltaCamiones.aspx" />
+    <Content Include="Catalogos\Camiones\EdicionCamion.aspx" />
     <Content Include="Catalogos\Camiones\ListadoCamiones.aspx" />
     <Content Include="Catalogos\Choferes\AltaChofer.aspx" />
     <Content Include="Catalogos\Choferes\EdicionChofer.aspx" />
     <Content Include="Catalogos\Choferes\ListadoChoferes.aspx" />
+    <Content Include="Catalogos\Rutas\AltaRuta.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -181,8 +185,26 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="autocompletar.asmx.cs">
+      <DependentUpon>autocompletar.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BLL\BLLCamiones.cs" />
     <Compile Include="BLL\BLLChoferes.cs" />
+    <Compile Include="Catalogos\Camiones\AltaCamiones.aspx.cs">
+      <DependentUpon>AltaCamiones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Camiones\AltaCamiones.aspx.designer.cs">
+      <DependentUpon>AltaCamiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Camiones\EdicionCamion.aspx.cs">
+      <DependentUpon>EdicionCamion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Camiones\EdicionCamion.aspx.designer.cs">
+      <DependentUpon>EdicionCamion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\Camiones\ListadoCamiones.aspx.cs">
       <DependentUpon>ListadoCamiones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -210,6 +232,13 @@
     </Compile>
     <Compile Include="Catalogos\Choferes\ListadoChoferes.aspx.designer.cs">
       <DependentUpon>ListadoChoferes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Rutas\AltaRuta.aspx.cs">
+      <DependentUpon>AltaRuta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Rutas\AltaRuta.aspx.designer.cs">
+      <DependentUpon>AltaRuta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -260,7 +289,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Catalogos\Rutas\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
