@@ -53,6 +53,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -117,6 +119,20 @@
     <Content Include="Catalogos\Choferes\EdicionChofer.aspx" />
     <Content Include="Catalogos\Choferes\ListadoChoferes.aspx" />
     <Content Include="Catalogos\Rutas\AltaRuta.aspx" />
+    <Content Include="Catalogos\Rutas\EnProceso.aspx" />
+    <Content Include="Connected Services\ServicioWeb\Gen2_3Capas.ServicioWeb.insDireccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\Gen2_3Capas.ServicioWeb.InsertarCargamentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServicioWeb\WSRutas.disco" />
+    <None Include="Connected Services\ServicioWeb\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioWeb\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioWeb\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -137,6 +153,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Connected Services\ServicioWeb\WSRutas.wsdl" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -191,6 +208,7 @@
     </Compile>
     <Compile Include="BLL\BLLCamiones.cs" />
     <Compile Include="BLL\BLLChoferes.cs" />
+    <Compile Include="BLL\BLLRuta.cs" />
     <Compile Include="Catalogos\Camiones\AltaCamiones.aspx.cs">
       <DependentUpon>AltaCamiones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -240,6 +258,18 @@
     <Compile Include="Catalogos\Rutas\AltaRuta.aspx.designer.cs">
       <DependentUpon>AltaRuta.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\Rutas\EnProceso.aspx.cs">
+      <DependentUpon>EnProceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Rutas\EnProceso.aspx.designer.cs">
+      <DependentUpon>EnProceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServicioWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -249,6 +279,7 @@
     </Compile>
     <Compile Include="DAL\DALCamiones.cs" />
     <Compile Include="DAL\DALChoferes.cs" />
+    <Compile Include="DAL\DALRuta.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -286,6 +317,7 @@
     </Compile>
     <Compile Include="VO\CamionesVO.cs" />
     <Compile Include="VO\ChoferesVO.cs" />
+    <Compile Include="VO\RutaVO.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -300,6 +332,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServicioWeb\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

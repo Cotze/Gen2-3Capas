@@ -27,6 +27,7 @@ namespace Gen2_3Capas.VO
         public double Kilometraje { get => _Kilometraje; set => _Kilometraje=value; }
         public bool Disponibilidad { get => _Disponibilidad; set => _Disponibilidad=value; }
         public string UrlFoto { get => _UrlFoto; set => _UrlFoto=value; }
+        public string camion { get => "Mat: " + _Matricula + " Modelo: " + _Modelo + " TipoCamion: " + _TipoCamion; set => _Matricula=value; }
 
         public CamionesVO()
         {

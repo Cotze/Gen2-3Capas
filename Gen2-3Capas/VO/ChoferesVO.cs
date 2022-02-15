@@ -27,6 +27,7 @@ namespace Gen2_3Capas.VO
         public string Licencia { get => _Licencia; set => _Licencia=value; }
         public string UrlFoto { get => _UrlFoto; set => _UrlFoto=value; }
         public bool Disponibilidad { get => _Disponibilidad; set => _Disponibilidad=value; }
+        public string  nombreCompleto { get => _Nombre + " " + _ApPaterno + " " + _ApMaterno; set => _Nombre=value; }
 
         public ChoferesVO() //Constructor
         {
